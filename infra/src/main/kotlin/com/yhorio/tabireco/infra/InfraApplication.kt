@@ -1,11 +1,11 @@
-package com.yhorio.tabireco.tabirecoserver
+package com.yhorio.tabireco.infra
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class TabirecoServerApplication
+class InfraApplication
 
 fun main(args: Array<String>) {
-	runApplication<TabirecoServerApplication>(*args)
+    runApplication<InfraApplication>(*args)
 }

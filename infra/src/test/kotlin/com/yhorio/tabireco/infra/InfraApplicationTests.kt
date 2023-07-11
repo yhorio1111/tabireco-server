@@ -1,13 +1,13 @@
-package com.yhorio.tabireco.tabirecoserver
+package com.yhorio.tabireco.infra
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class TabirecoServerApplicationTests {
+class InfraApplicationTests {
 
-	@Test
-	fun contextLoads() {
-	}
+    @Test
+    fun contextLoads() {
+    }
 
 }
