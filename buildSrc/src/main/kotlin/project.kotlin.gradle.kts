@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("project.base")
     kotlin("jvm")
+    id("io.gitlab.arturbosch.detekt")
 }
 
 val jvmVersion = "17"
@@ -28,3 +29,7 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+//detekt {
+//
+//}
