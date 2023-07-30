@@ -35,5 +35,6 @@ tasks.withType<Test> {
 }
 
 detekt {
-    config = co
+    buildUponDefaultConfig = true
+    config = files("$rootDir/config/detekt.yml")
 }
