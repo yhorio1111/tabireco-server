@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("project.base")
+    id("tabireco.base")
     kotlin("jvm")
     id("io.gitlab.arturbosch.detekt")
 }
