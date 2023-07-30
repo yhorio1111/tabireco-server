@@ -17,6 +17,10 @@ kotlin {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+//    detekt
+    val detektVersion = detekt.toolVersion
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
 }
 
 tasks.withType<KotlinCompile> {
@@ -30,6 +34,6 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-//detekt {
-//
-//}
+detekt {
+    config = co
+}
