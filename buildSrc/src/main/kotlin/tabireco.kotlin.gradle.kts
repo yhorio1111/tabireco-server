@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("tabireco.base")
     kotlin("jvm")
+    kotlin("kapt")
     id("io.gitlab.arturbosch.detekt")
 }
 
@@ -10,13 +11,13 @@ val jvmVersion = "17"
 
 kotlin {
     jvmToolchain {
-        (this as JavaToolchainSpec)
-                .languageVersion.set(JavaLanguageVersion.of(jvmVersion))
+        this.languageVersion.set(JavaLanguageVersion.of(jvmVersion))
     }
 }
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
 //    detekt
     val detektVersion = detekt.toolVersion
