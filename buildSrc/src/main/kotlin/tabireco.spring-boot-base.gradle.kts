@@ -6,6 +6,12 @@ plugins {
     kotlin("plugin.spring")
 }
 
+dependencyManagement {
+    imports {
+        mavenBom(SpringBootPlugin.BOM_COORDINATES)
+    }
+}
+
 dependencies {
 //    implementation("org.springframework.boot:spring-boot-starter")
 }
