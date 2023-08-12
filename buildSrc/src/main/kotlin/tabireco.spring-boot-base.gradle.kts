@@ -6,12 +6,14 @@ plugins {
     kotlin("plugin.spring")
 }
 
-repositories {
-    mavenCentral()
+dependencyManagement {
+    imports {
+        mavenBom(SpringBootPlugin.BOM_COORDINATES)
+    }
 }
 
 dependencies {
-//    implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter")
 }
 
 tasks.withType<Test> {
