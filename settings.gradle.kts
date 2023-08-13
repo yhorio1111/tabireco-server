@@ -1,4 +1,4 @@
 rootProject.name = "tabireco-server"
 include(":domain")
-include(":app")
+include(":app:api")
 include(":infra")
