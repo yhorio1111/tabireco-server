@@ -1,7 +1,6 @@
 package com.yhorio.tabireco.domain.entity
 
 import com.yhorio.tabireco.domain.type.TravelEventType
-import com.yhorio.tabireco.domain.vo.id.EntityId
 import com.yhorio.tabireco.domain.vo.id.TravelEventId
 import de.huxhorn.sulky.ulid.ULID
 import java.time.LocalDateTime
