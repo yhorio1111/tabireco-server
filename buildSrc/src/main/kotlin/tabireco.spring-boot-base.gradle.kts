@@ -19,6 +19,8 @@ dependencyManagement {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("de.huxhorn.sulky:de.huxhorn.sulky.ulid")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
 tasks.withType<Test> {
