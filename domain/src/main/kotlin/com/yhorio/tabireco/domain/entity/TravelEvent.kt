@@ -2,7 +2,8 @@ package com.yhorio.tabireco.domain.entity
 
 import com.yhorio.tabireco.domain.type.TravelEventType
 import com.yhorio.tabireco.domain.vo.id.TravelEventId
-import de.huxhorn.sulky.ulid.ULID
+import com.yhorio.tabireco.domain.vo.id.ULID
+import com.yhorio.tabireco.domain.vo.id.ulid
 import java.time.LocalDateTime
 
 
@@ -12,16 +13,17 @@ data class TravelEvent(
     val eventTime: LocalDateTime,
     val details: String,
 ) : Entity<ULID> {
-    fun of(travelEventType: TravelEventType, eventTime: LocalDateTime, details: String): TravelEvent {
-        val ulid = ULID()
-        return TravelEvent(
-            id = TravelEventId(ulid),
-            travelEventType = travelEventType,
-            eventTime = eventTime,
-            details = details
-        )
+    companion object {
+        fun of(travelEventType: TravelEventType, eventTime: LocalDateTime, details: String): TravelEvent {
+            return TravelEvent(
+                id = TravelEventId(ulid()),
+                travelEventType = travelEventType,
+                eventTime = eventTime,
+                details = details
+            )
+        }
     }
     override fun isValid(): Boolean {
-        return id.value.toString().length == 26
+        return id.value.length == 26
     }
 }
