@@ -19,6 +19,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+    // test
+    testImplementation("io.mockk:mockk:1.13.5")
+    testImplementation("com.willowtreeapps.assertk:assertk:0.27.0")
+
 //    detekt
     val detektVersion = detekt.toolVersion
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:$detektVersion")
